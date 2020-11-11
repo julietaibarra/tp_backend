@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <meta charset="utf-8">
+    <title> Datos de Empleados</title>
+      <link rel="stylesheet" href="css/styles.css">
+    <!-- Required meta tags -->
+
+  </head>
+  <body class="">
+    <div class="contenedor">
+        <nav>
+          <ul>
+            <li> <a href="modificar.html">Modificación</a> </li>
+            <li> <a href="baja.html">Baja </a> </li>
+            <li> <a href="departamentos.php">Departamentos</a> </li>
+            <li> <a href="empleados.php">Empleados</a> </li>
+            <li> <a href="alta.html">Alta</a> </li>
+          </ul>
+        </nav>
+        <h1> Datos de Empleados</h1>
+        <h2>Eliminar</h2>
+          <p>Ingrese el DNI del empleado a eliminar de la base de datos.</p>
+          <form action="baja.php" method="post">
+            <div class="form-group">
+              <label>DNI</label>
+              <input class="form-control" type="text" name="dni" placeholder="DNI">
+            </div>
+              <input class="btn btn-primary" type="submit" name="submit" value="Eliminar">
+
+          </form>
+
+    </div>
+    <footer class="footer">
+      <p>Julieta Ibarra<br>
+      <!-- <a href="ejemplo@example.com">ejemplo@example.com</a></p> -->
+    </footer>
+
+  </body>
+</html>
