@@ -30,7 +30,7 @@ $datos=mysqli_fetch_array($repuesta);
                 <ul>
                   <li> <a href="modificar.html">Modificación</a> </li>
                   <li> <a href="baja.html">Baja </a> </li>
-                  <li> <a href="departamentos.php">Departamentos</a> </li>
+                  <!-- <li> <a href="departamentos.php">Departamentos</a> </li> -->
                   <li> <a href="empleados.php">Empleados</a> </li>
                   <li> <a href="alta.html">Alta</a> </li>
                 </ul>

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title> Torneo de Tenis</title>
+    <title>Datos de empleados</title>
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body >
@@ -12,7 +12,7 @@
           <ul>
             <li> <a href="modificar.html">Modificación</a> </li>
             <li> <a href="baja.html">Baja </a> </li>
-            <li> <a href="departamentos.php">Departamentos</a> </li>
+            <!-- <li> <a href="departamentos.php">Departamentos</a> </li> -->
             <li> <a href="empleados.php">Empleados</a> </li>
             <li> <a href="alta.html">Alta</a> </li>
           </ul>
@@ -30,7 +30,7 @@
         <th>fecha de ingreso</th>
         <th>Cargo</th>
         <th>sueldo neto</th>
-        <th>ID departamento</th>
+        <!-- <th>ID departamento</th> -->
       </tr>
       <?php
       $conexion = mysqli_connect("127.0.0.1", "root","");
@@ -66,9 +66,9 @@
         echo "<td>";
         echo $fila2 ["sueldo_neto"];
         echo "</td>";
-        echo "<td>";
-        echo $fila2 ["id_depto"];
-        echo "</td>";
+        // echo "<td>";
+        // echo $fila2 ["id_depto"];
+        // echo "</td>";
         echo "</tr>";
 
       }
