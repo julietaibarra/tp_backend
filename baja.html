@@ -23,23 +23,31 @@
 
            </nav>
       </header>
-        <h1> Datos de Empleados</h1>
-        <h2>Eliminar</h2>
-          <p>Ingrese el DNI del empleado a eliminar de la base de datos.</p>
-          <form action="baja.php" method="post">
-            <div class="form-group">
-              <label>DNI</label>
-              <input class="form-control" type="text" name="dni" placeholder="DNI">
-            </div>
-              <input class="btn btn-primary" type="submit" name="submit" value="Eliminar">
+      <div class="row p-3">
+        <div class="container border p-3">
+          <h1> Datos de Empleados</h1>
+          <h2>Eliminar</h2>
+            <p>Ingrese el DNI del empleado a eliminar de la base de datos.</p>
+            <form action="baja.php" method="post">
+              <div class="form-group row">
+                <label for=""class="col-sm-2 col-md-2 col-lg-2 col-form-label">DNI</label>
+                <div class="col-sm-10 col-md-10 col-lg-10">
+                    <input type="text" name="dni" id="dni" placeholder="dni" pattern="^[0-9]{8}$" title= "El dni debe tener 8 numeros" value="" required>
+                </div>
 
-          </form>
+              </div>
+                <input class="btn btn-primary" type="submit" name="submit" value="Eliminar">
 
-    </div>
-    <!-- <footer class="footer">
-      <p>Julieta Ibarra<br>
-      <a href="ejemplo@example.com">ejemplo@example.com</a></p>
-    </footer> -->
+            </form>
+
+      </div>
+      <!-- <footer class="footer">
+        <p>Julieta Ibarra<br>
+        <a href="ejemplo@example.com">ejemplo@example.com</a></p>
+      </footer> -->
+
+        </div>
+      </div>
 
   </body>
 </html>

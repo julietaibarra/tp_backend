@@ -51,7 +51,7 @@ $datos=mysqli_fetch_array($repuesta);
               <img class="logo-img" src="img/error.png" alt="">
             </div>
             <form action="" method="post">
-              <div class="d-flex justify-content-end">
+              <div class="">
                 <button class="btn btn-primary" type="submit" name="volver" formaction="modificar.html">Volver</button>
               </div>
             </form>

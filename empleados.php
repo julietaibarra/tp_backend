@@ -22,6 +22,8 @@
 
          </nav>
     </header>
+    <div class="row p-3">
+      <div class="container border p-3">
     <h1> Datos de los empleados</h1>
     <p>Empleados</p>
 
@@ -84,6 +86,10 @@
       </tbody>
 
     </table>
+      
+  </div>
+
+    </div>
       </div>
 </article>
     <!-- <footer class="footer">
