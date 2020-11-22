@@ -29,50 +29,50 @@
     <h2>Ingreso de datos</h2>
     <p>Ingrase los dados del empleado para que sea agregado a la base de datos</p>
 <div class="card card-container">
-<p id="profile-name" class="profile-name-card"></p>
+
   <form class="form-signin"  method="post" action="alta.php" >
-      <div class="form-group">
-        <label for="">DNI</label>
-        <div class="">
+      <div class="form-group row">
+        <label for=""class="col-sm-2 col-md-2 col-lg-2 col-form-label">DNI</label>
+        <div class="col-sm-10 col-md-10 col-lg-10">
             <input type="text" name="dni" id="dni" placeholder="dni" pattern="^[0-9]{8}$" title= "El dni debe tener 8 numeros" value="" required>
         </div>
 
       </div>
-    <div class="form-group">
-      <label for="">Apellido</label>
-      <div class="">
-          <input type="text" name="apellido" id="apellido" placeholder="apellido" pattern="^[a-zA-Z][a-zA-z]{3,20}$" title="El apellido no puede ser vacio "value="" required>
+    <div class="form-group row">
+      <label for=""class="col-sm-2 col-md-2 col-lg-2 col-form-label">Apellido</label>
+      <div class="col-sm-10 col-md-10 col-lg-10">
+          <input type="text" name="apellido" id="apellido" placeholder="apellido" pattern"([a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁ ÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+[0-9]+[""]{0,10,0}){2,20}$" title="El apellido no puede ser vacio "value="" required>
       </div>
     </div>
-    <div class="form-group">
-      <label for="">Nombre</label>
-      <div class="">
-          <input type="text" name="nombre" id="nombre" placeholder="Nombre" pattern="^[a-zA-Z][a-zA-z]{3,20}$" title= "En nombre no puede ser vacio" required >
+    <div class="form-group row">
+      <label for=""class="col-sm-2 col-md-2 col-lg-2 col-form-label">Nombre</label>
+      <div class="col-sm-10 col-md-10 col-lg-10">
+          <input type="text" name="nombre" id="nombre" placeholder="Nombre" pattern"([a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁ ÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+[0-9]+[""]{0,10,0}){2,20}$" title= "En nombre no puede ser vacio" required >
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="">Fecha de nacimiento</label>
-      <div class="">
+    <div class="form-group row">
+      <label for=""class="col-sm-2 col-md-2 col-lg-2 col-form-label">Fecha de nacimiento</label>
+      <div class="col-sm-10 col-md-10 col-lg-10">
           <input type="date" name="fecha_nac" value="" id="fecha_nac"value="2018-07-22">
       </div>
     </div>
-    <div class="form-group">
-      <label for="">Fecha de ingreso</label>
-      <div class="">
+    <div class="form-group row">
+      <label for=""class="col-sm-2 col-md-2 col-lg-2 col-form-label">Fecha de ingreso</label>
+      <div class="col-sm-10 col-md-10 col-lg-10">
         <input type="date" name="fecha_inc" value="" id="fecha_inc"value="2018-07-22">
       </div>
     </div>
-    <div class="form-group">
-      <label for="">Cargo</label>
-      <div class="">
-        <input type="text" name="cargo" id="cargo" placeholder="cargo" >
+    <div class="form-group row">
+      <label for=""class="col-sm-2 col-md-2 col-lg-2 col-form-label">Cargo</label>
+      <div class="col-sm-10 col-md-10 col-lg-10">
+        <input type="text" name="cargo" id="cargo" placeholder="cargo" pattern"([a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁ ÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+[0-9]+[""]{0,10,0}){2,20}$" >
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="">Sueldo neto</label>
-      <div class="">
+    <div class="form-group row">
+      <label for=""class="col-sm-2 col-md-2 col-lg-2 col-form-label">Sueldo neto</label>
+      <div class="col-sm-10 col-md-10 col-lg-10">
         <input type="number" step="0.01" min=0 name="sueldo_neto" placeholder="sueldo neto" value="" id="sueldo_neto">
       </div>
     </div>
@@ -95,18 +95,19 @@
     <div class="">
       <input type="submit" name="submit" value="Ingresar">
     </div>
+    <!-- <div class="d-flex justify-content-end">
+      <button class="btn btn-primary" type="submit" name="volver" value= "Ingresar" >Ingresar</button>
+    </div> -->
 
   </form>
   </div>
-
-
       </div>
 
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <p>Julieta Ibarra<br>
-      <!-- <a href="ejemplo@example.com">ejemplo@example.com</a></p> -->
-    </footer>
+      <a href="ejemplo@example.com">ejemplo@example.com</a></p>
+    </footer> -->
 
   </body>
 </html>

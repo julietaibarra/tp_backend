@@ -17,12 +17,12 @@
 
 
     if ($q= "SELECT dni FROM empleado WHERE dni=$dni") {
-    //
-    // $req=mysqli_query($conexion,$q);
-    //
-    //   $dni_req= mysqli_fectch_array($req);
-    //   if ($dni_req)
-    // {
+
+    $req=mysqli_query($conexion,$q);
+
+      $dni_req= mysqli_fetch_array($req);
+      if ($dni_req)
+    {
       ?>
       <!DOCTYPE html>
       <html lang="en" dir="ltr">
@@ -48,7 +48,20 @@
 
                  </nav>
             </header>
-          <h1>El dni ya esta en la base de datos</h1>
+            <div class="row p-3">
+              <div class="container border p-3">
+                <h2>Alta de empleado</h2>
+                <p> El DNI ingresado  esta en la base de datos.</p>
+                <div class="container-img p-3">
+                  <img class="logo-img" src="img/error.png" alt="">
+                </div>
+                <form action="" method="post">
+                  <div class="d-flex justify-content-end">
+                    <button class="btn btn-primary" type="submit" name="volver" formaction="alta.html">Volver</button>
+                  </div>
+                </form>
+              </div>
+            </div>
         </body>
 
       </html>
@@ -61,5 +74,5 @@
         mysqli_query($conexion,$consulta);
         header('Location: empleados.php');
       }
-  
+}
     ?>

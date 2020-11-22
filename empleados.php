@@ -86,10 +86,10 @@
     </table>
       </div>
 </article>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <p>Julieta Ibarra<br>
-      <!-- <a href="ejemplo@example.com">ejemplo@example.com</a></p> -->
-    </footer>
+      <a href="ejemplo@example.com">ejemplo@example.com</a></p>
+    </footer> -->
 
   </body>
 </html>

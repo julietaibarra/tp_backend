@@ -136,17 +136,17 @@ $datos=mysqli_fetch_array($repuesta);
           </div>
         </div>
       <?php } ?>
-      <div class="row">
+      <!-- <div class="row">
         <div class="container">
           <div class="navbar bg-dark navbar-dark"></div>
         </div>
-      </div>
+      </div> -->
     </div>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <p>Julieta Ibarra<br>
 
-    </footer>
+    </footer> -->
 
 
   </body>
