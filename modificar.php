@@ -21,20 +21,24 @@ $datos=mysqli_fetch_array($repuesta);
 <html lang="en" dir="ltr">
   <head>
     <title>Modificacion de datos de empleado</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
   </head>
   <body class="">
-    <div class="cont">
+    <div class="container">
+      <header>
+        <nav class="navbar navbar-light  navbar-expand-sm justify-content-between" style="background-color: #e3f2fd;">
 
-              <nav>
-                <ul>
-                  <li> <a href="modificar.html">Modificación</a> </li>
-                  <li> <a href="baja.html">Baja </a> </li>
-                  <!-- <li> <a href="departamentos.php">Departamentos</a> </li> -->
-                  <li> <a href="empleados.php">Empleados</a> </li>
-                  <li> <a href="alta.html">Alta</a> </li>
-                </ul>
-              </nav>
+                   <img src="img/empleados.png" width="175" height="100" class="d-inline-block align-top" alt="" loading="lazy">
+                   <ul class="navbar-nav">
+                     <li class="nav-item">  <a class="nav-link active" href="alta.html">Alta</a> </li>
+                     <li class="nav-item">  <a class="nav-link" href="baja.html">Baja </a> </li>
+                    <li class="nav-item"><a  class="nav-link"href="modificar.html">Modificación</a> </li>
+                    <li class="nav-item">  <a class="nav-link" href="empleados.php">Empleados</a> </li>
+                       <!-- <li> <a href="departamentos.php">Departamentos</a> </li> -->
+                     </ul>
+
+           </nav>
+      </header>
       <?php
       //6) Filtramos los diferentes resultados y realizamos una accion definida para cada uno.
       // Si el array $datos es de tipo NULL, ejecuta el bloque de instrucciones.

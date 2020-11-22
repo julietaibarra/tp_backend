@@ -3,99 +3,105 @@
   <head>
     <meta charset="utf-8">
     <title>Datos de los Empleados</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrap.min.js">
 
   </head>
 
-  <body >
-<article class="">
-  <div class="contenedor"   >
+  <body  >
 
-        <nav>
-          <ul>
-            <li> <a href="modificar.html">Modificación</a> </li>
-            <li> <a href="baja.html">Baja </a> </li>
-            <!-- <li> <a href="departamentos.php">Departamentos</a> </li> -->
-            <li> <a href="empleados.php">Empleados</a> </li>
-            <li> <a href="alta.html">Alta</a> </li>
-          </ul>
-        </nav>
+  <div class="container">
+    <header>
+      <nav class="navbar navbar-light  navbar-expand-sm justify-content-between" style="background-color: #e3f2fd;">
+
+                 <img src="img/empleados.png" width="175" height="100" class="d-inline-block align-top" alt="" loading="lazy">
+                 <ul class="navbar-nav">
+                   <li class="nav-item">  <a class="nav-link active" href="alta.html">Alta</a> </li>
+                   <li class="nav-item">  <a class="nav-link" href="baja.html">Baja </a> </li>
+                  <li class="nav-item"><a  class="nav-link"href="modificar.html">Modificación</a> </li>
+                  <li class="nav-item">  <a class="nav-link" href="empleados.php">Empleados</a> </li>
+                     <!-- <li> <a href="departamentos.php">Departamentos</a> </li> -->
+                   </ul>
+
+         </nav>
+    </header>
     <h1> Datos de Empleados</h1>
     <h2>Ingreso de datos</h2>
     <p>Ingrase los dados del empleado para que sea agregado a la base de datos</p>
+<div class="card card-container">
+<p id="profile-name" class="profile-name-card"></p>
+  <form class="form-signin"  method="post" action="alta.php" >
+      <div class="form-group">
+        <label for="">DNI</label>
+        <div class="">
+            <input type="text" name="dni" id="dni" placeholder="dni" pattern="^[0-9]{8}$" title= "El dni debe tener 8 numeros" value="" required>
+        </div>
 
-<form  method="post" action="alta.php" >
-  <div class="">
-
-    <div class="">
-      <label for="">DNI</label>
+      </div>
+    <div class="form-group">
+      <label for="">Apellido</label>
       <div class="">
-          <input type="text" name="dni" id="dni" placeholder="dni" pattern="^[0-9]{8}$" title= "El dni debe tener 8 numeros" value="" required>
+          <input type="text" name="apellido" id="apellido" placeholder="apellido" pattern="^[a-zA-Z][a-zA-z]{3,20}$" title="El apellido no puede ser vacio "value="" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="">Nombre</label>
+      <div class="">
+          <input type="text" name="nombre" id="nombre" placeholder="Nombre" pattern="^[a-zA-Z][a-zA-z]{3,20}$" title= "En nombre no puede ser vacio" required >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="">Fecha de nacimiento</label>
+      <div class="">
+          <input type="date" name="fecha_nac" value="" id="fecha_nac"value="2018-07-22">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="">Fecha de ingreso</label>
+      <div class="">
+        <input type="date" name="fecha_inc" value="" id="fecha_inc"value="2018-07-22">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="">Cargo</label>
+      <div class="">
+        <input type="text" name="cargo" id="cargo" placeholder="cargo" >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="">Sueldo neto</label>
+      <div class="">
+        <input type="number" step="0.01" min=0 name="sueldo_neto" placeholder="sueldo neto" value="" id="sueldo_neto">
+      </div>
+    </div>
+
+    <!-- <div class="">
+      <label for="">Departamento</label>
+      <div class="">
+        <select class="" name="depto" id="depto" >
+          <option selected="true" disabled="disabled">seleccione el departamento</option>
+          <option value="1">Informática</option>
+          <option value="2">Administración</option>
+          <option value="3">Contabilidad</option>
+          <option value="4">Gerencia</option>
+          <option value="5">Call center</option>
+        </select>
       </div>
 
+    </div> -->
+
+    <div class="">
+      <input type="submit" name="submit" value="Ingresar">
     </div>
 
-    <label for="">Apellido</label>
-    <div class="">
-        <input type="text" name="apellido" id="apellido" placeholder="apellido" pattern="^[a-zA-Z][a-zA-z]{3,20}$" title="El apellido no puede ser vacio "value="" required>
-    </div>
-  </div>
-  <div class="">
-    <label for="">Nombre</label>
-    <div class="">
-        <input type="text" name="nombre" id="nombre" placeholder="Nombre" pattern="^[a-zA-Z][a-zA-z]{3,20}$" title= "En nombre no puede ser vacio" required >
-    </div>
+  </form>
   </div>
 
-  <div class="">
-    <label for="">Fecha de nacimiento</label>
-    <div class="">
-        <input type="date" name="fecha_nac" value="" id="fecha_nac"value="2018-07-22">
-    </div>
-  </div>
-  <div class="">
-    <label for="">Fecha de ingreso</label>
-    <div class="">
-      <input type="date" name="fecha_inc" value="" id="fecha_inc"value="2018-07-22">
-    </div>
-  </div>
-  <div class="">
-    <label for="">Cargo</label>
-    <div class="">
-      <input type="text" name="cargo" id="cargo" placeholder="cargo" >
-    </div>
-
-  </div>
-  <div class="">
-    <label for="">Sueldo neto</label>
-    <div class="">
-      <input type="number" step="0.01" min=0 name="sueldo_neto" placeholder="sueldo neto" value="" id="sueldo_neto">
-    </div>
-  </div>
-  <!-- <div class="">
-    <label for="">Departamento</label>
-    <div class="">
-      <select class="" name="depto" id="depto" >
-        <option selected="true" disabled="disabled">seleccione el departamento</option>
-        <option value="1">Informática</option>
-        <option value="2">Administración</option>
-        <option value="3">Contabilidad</option>
-        <option value="4">Gerencia</option>
-        <option value="5">Call center</option>
-      </select>
-    </div>
-
-  </div> -->
-
-  <div class="">
-    <input type="submit" name="submit" value="Ingresar">
-  </div>
-
-</form>
 
       </div>
 
-</article>
 
     <footer class="footer">
       <p>Julieta Ibarra<br>

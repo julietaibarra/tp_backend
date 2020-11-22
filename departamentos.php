@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title> Torneo de Tenis</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!--script type="text/javascript" src="js/confirmacion.js">
 
     </script-->
