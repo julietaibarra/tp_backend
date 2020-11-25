@@ -16,14 +16,12 @@
                      <li class="nav-item">  <a class="nav-link" href="baja.html">Baja </a> </li>
                     <li class="nav-item"><a  class="nav-link"href="modificar.html">Modificación</a> </li>
                     <li class="nav-item">  <a class="nav-link" href="empleados.php">Empleados</a> </li>
-                       <!-- <li> <a href="departamentos.php">Departamentos</a> </li> -->
                      </ul>
-
            </nav>
       </header>
-
       <div class="row p-3">
         <div class="container border p-3">
+          <h1>Datos empleados</h1>
           <h2>Modificar datos del empleado</h2>
           <p>Ingrese el DNI empleado a buscar en la base de datos.</p>
           <form action="modificar.php" method="post">
@@ -32,7 +30,6 @@
               <div class="col-sm-10 col-md-10 col-lg-10">
                   <input type="text" name="dni" id="dni" placeholder="dni" pattern="^[0-9]{8}$" title= "El dni debe tener 8 numeros" value="" required>
               </div>
-
             </div>
             <div class="">
               <input class="btn btn-primary" type="submit" name="submit" value="Buscar">
@@ -40,16 +37,6 @@
           </form>
         </div>
       </div>
-      <!-- <div class="row">
-        <div class="container">
-          <div class="navbar bg-dark navbar-dark"></div>
-        </div>
-      </div> -->
     </div>
-    <!-- <footer class="footer">
-      <p>Julieta Ibarra<br>
-      <a href="ejemplo@example.com">ejemplo@example.com</a></p>
-    </footer> -->
-
   </body>
 </html>

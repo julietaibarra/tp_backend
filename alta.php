@@ -5,7 +5,6 @@
     ///
     mysqli_select_db($conexion, "emple_dep");
     //2) Almacena los datos del envio POST
-    // $num_legajo=$_POST['num_legajo'];
     $dni=$_POST['dni'];
     $apellido = $_POST['apellido'];
     $nombre = $_POST['nombre'];
@@ -14,7 +13,6 @@
     $cargo= $_POST['cargo'];
     $sueldo=$_POST['sueldo_neto'];
     // $depto=$_POST['depto'];
-
 
     if ($q= "SELECT dni FROM empleado WHERE dni=$dni") {
 
@@ -30,26 +28,23 @@
           <meta charset="utf-8">
           <title></title>
           <link rel="stylesheet" href="css/bootstrap.min.css">
-
         </head>
         <body>
           <div class="container">
             <header>
               <nav class="navbar navbar-light  navbar-expand-sm justify-content-between" style="background-color: #e3f2fd;">
-
                          <img src="img/empleados.png" width="175" height="100" class="d-inline-block align-top" alt="" loading="lazy">
                          <ul class="navbar-nav">
                            <li class="nav-item">  <a class="nav-link active" href="alta.html">Alta</a> </li>
                            <li class="nav-item">  <a class="nav-link" href="baja.html">Baja </a> </li>
                           <li class="nav-item"><a  class="nav-link"href="modificar.html">Modificación</a> </li>
                           <li class="nav-item">  <a class="nav-link" href="empleados.php">Empleados</a> </li>
-                             <!-- <li> <a href="departamentos.php">Departamentos</a> </li> -->
                            </ul>
-
                  </nav>
             </header>
             <div class="row p-3">
               <div class="container border p-3">
+                <h1> Datos de Empleados</h1>
                 <h2>Alta de empleado</h2>
                 <p> El DNI ingresado  esta en la base de datos.</p>
                 <div class="container-img p-3">
@@ -74,5 +69,4 @@
         mysqli_query($conexion,$consulta);
         header('Location: empleados.php');
       }
-}
     ?>

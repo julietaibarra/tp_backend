@@ -17,15 +17,13 @@
                    <li class="nav-item">  <a class="nav-link" href="baja.html">Baja </a> </li>
                   <li class="nav-item"><a  class="nav-link"href="modificar.html">Modificación</a> </li>
                   <li class="nav-item">  <a class="nav-link" href="empleados.php">Empleados</a> </li>
-                     <!-- <li> <a href="departamentos.php">Departamentos</a> </li> -->
                    </ul>
-
          </nav>
     </header>
     <div class="row p-3">
       <div class="container border p-3">
     <h1> Datos de los empleados</h1>
-    <p>Empleados</p>
+    <p>Empleados registrados</p>
 
 <table class="table table-hover">
   <thead>
@@ -38,14 +36,13 @@
     <th scope="col">fecha de ingreso</th>
     <th scope="col">Cargo</th>
     <th scope="col">sueldo neto</th>
-    <!-- <th>ID departamento</th> -->
+
   </tr>
   </thead>
       <tbody>
         <?php
         $conexion = mysqli_connect("127.0.0.1", "root","");
         mysqli_select_db($conexion,"emple_dep");
-
         $consulta= "SELECT*FROM `empleado`";
     //4) ejecutar la orden y obtener los registros
         $datos= mysqli_query($conexion, $consulta);
@@ -76,26 +73,18 @@
           echo "<td>";
           echo $fila2 ["sueldo_neto"];
           echo "</td>";
-          // echo "<td>";
-          // echo $fila2 ["id_depto"];
-          // echo "</td>";
           echo "</tr>";
-
         }
          ?>
       </tbody>
 
     </table>
-      
+
   </div>
 
     </div>
       </div>
 </article>
-    <!-- <footer class="footer">
-      <p>Julieta Ibarra<br>
-      <a href="ejemplo@example.com">ejemplo@example.com</a></p>
-    </footer> -->
 
   </body>
 </html>

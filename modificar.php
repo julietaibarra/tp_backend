@@ -7,7 +7,6 @@ mysqli_select_db($conexion, "emple_dep");
 $dni = $_POST['dni'];
 
 // 3) Preparar la orden SQL
-// => Selecciona todos los campos de la tabla alumno donde el campo dni sea igual a $dni
 $consulta= "SELECT * FROM empleado WHERE dni=$dni";
 
 // 4) Ejecutar la orden y almacenamos en una variable el resultado
@@ -16,7 +15,6 @@ $repuesta=mysqli_query ($conexion, $consulta);
 // 5) Transformamos el registro obtenido a un array
 $datos=mysqli_fetch_array($repuesta);
 ?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -41,14 +39,13 @@ $datos=mysqli_fetch_array($repuesta);
       </header>
       <?php
       //6) Filtramos los diferentes resultados y realizamos una accion definida para cada uno.
-      // Si el array $datos es de tipo NULL, ejecuta el bloque de instrucciones.
+
       if (is_null($datos)){?>
         <div class="row p-3">
           <div class="container border p-3">
             <h2>Modificar</h2>
             <p> El DNI ingresado no esta en la base de datos.</p>
             <div class="container-img p-3">
-              <img class="logo-img" src="img/error.png" alt="">
             </div>
             <form action="" method="post">
               <div class="">
@@ -68,6 +65,7 @@ $datos=mysqli_fetch_array($repuesta);
         ?>
         <div class="row p-3">
           <div class="container border p-3">
+            <h1>Datos empleados</h1>
             <h2>Modificar</h2>
             <p>Ingrese los nuevos datos del alumno.</p>
             <form action="" method="post">
@@ -125,8 +123,6 @@ $datos=mysqli_fetch_array($repuesta);
               $sueldo=$_POST['sueldo_neto'];
 
               // 3') Preparar la orden SQL
-              // UPDATE nombre_tabla SET nombre_campos=$variable WHERE campo_clave=$variable
-              // Actualiza de la tabla alumno los siguiente campos donde el campo dni sea igual a $dni
               $consulta = "UPDATE empleado SET dni='$dni', nombre='$nombre', apellido='$apellido', cargo='$cargo', sueldo_neto='$sueldo' WHERE dni=$dni";
 
               // 4') Ejecutar la orden y actualizamos los datos
@@ -136,18 +132,8 @@ $datos=mysqli_fetch_array($repuesta);
           </div>
         </div>
       <?php } ?>
-      <!-- <div class="row">
-        <div class="container">
-          <div class="navbar bg-dark navbar-dark"></div>
-        </div>
-      </div> -->
+
     </div>
-
-    <!-- <footer class="footer">
-      <p>Julieta Ibarra<br>
-
-    </footer> -->
-
 
   </body>
 </html>
