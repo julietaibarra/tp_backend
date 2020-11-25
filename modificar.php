@@ -31,15 +31,13 @@ $datos=mysqli_fetch_array($repuesta);
                      <li class="nav-item">  <a class="nav-link active" href="alta.html">Alta</a> </li>
                      <li class="nav-item">  <a class="nav-link" href="baja.html">Baja </a> </li>
                     <li class="nav-item"><a  class="nav-link"href="modificar.html">Modificación</a> </li>
-                    <li class="nav-item">  <a class="nav-link" href="empleados.php">Empleados</a> </li>
-                       <!-- <li> <a href="departamentos.php">Departamentos</a> </li> -->
+                    <li class="nav-item">  <a class="nav-link" href="index.php">Empleados</a> </li>
                      </ul>
 
            </nav>
       </header>
       <?php
       //6) Filtramos los diferentes resultados y realizamos una accion definida para cada uno.
-
       if (is_null($datos)){?>
         <div class="row p-3">
           <div class="container border p-3">
@@ -65,7 +63,7 @@ $datos=mysqli_fetch_array($repuesta);
         ?>
         <div class="row p-3">
           <div class="container border p-3">
-            <h1>Datos empleados</h1>
+            <h1>Datos de Empleados</h1>
             <h2>Modificar</h2>
             <p>Ingrese los nuevos datos del alumno.</p>
             <form action="" method="post">
@@ -109,7 +107,6 @@ $datos=mysqli_fetch_array($repuesta);
               </div>
             </form>
             <?php
-            // Si en la variable constante $_POST existe un indice llamado 'guardar_cambios' ocurre el bloque de instrucciones.
             if(array_key_exists('guardar_cambios',$_POST)){
               // 1') Conexion
               $conexion = mysqli_connect("127.0.0.1", "root", "");
@@ -127,7 +124,7 @@ $datos=mysqli_fetch_array($repuesta);
 
               // 4') Ejecutar la orden y actualizamos los datos
               mysqli_query($conexion, $consulta);
-              header('Location: empleados.php');
+              header('Location: index.php');
             }?>
           </div>
         </div>

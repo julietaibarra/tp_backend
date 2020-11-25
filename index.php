@@ -16,7 +16,7 @@
                    <li class="nav-item">  <a class="nav-link active" href="alta.html">Alta</a> </li>
                    <li class="nav-item">  <a class="nav-link" href="baja.html">Baja </a> </li>
                   <li class="nav-item"><a  class="nav-link"href="modificar.html">Modificación</a> </li>
-                  <li class="nav-item">  <a class="nav-link" href="empleados.php">Empleados</a> </li>
+                  <li class="nav-item">  <a class="nav-link" href="index.php">Empleados</a> </li>
                    </ul>
          </nav>
     </header>

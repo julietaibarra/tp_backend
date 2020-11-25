@@ -33,25 +33,25 @@
           <div class="container">
             <header>
               <nav class="navbar navbar-light  navbar-expand-sm justify-content-between" style="background-color: #e3f2fd;">
+
                          <img src="img/empleados.png" width="175" height="100" class="d-inline-block align-top" alt="" loading="lazy">
                          <ul class="navbar-nav">
                            <li class="nav-item">  <a class="nav-link active" href="alta.html">Alta</a> </li>
                            <li class="nav-item">  <a class="nav-link" href="baja.html">Baja </a> </li>
                           <li class="nav-item"><a  class="nav-link"href="modificar.html">Modificación</a> </li>
-                          <li class="nav-item">  <a class="nav-link" href="empleados.php">Empleados</a> </li>
+                          <li class="nav-item">  <a class="nav-link" href="index.php">Empleados</a> </li>
                            </ul>
                  </nav>
             </header>
             <div class="row p-3">
               <div class="container border p-3">
-                <h1> Datos de Empleados</h1>
                 <h2>Alta de empleado</h2>
                 <p> El DNI ingresado  esta en la base de datos.</p>
                 <div class="container-img p-3">
                   <img class="logo-img" src="img/error.png" alt="">
                 </div>
                 <form action="" method="post">
-                  <div class="d-flex justify-content-end">
+                  <div class="d-flex">
                     <button class="btn btn-primary" type="submit" name="volver" formaction="alta.html">Volver</button>
                   </div>
                 </form>
@@ -67,6 +67,7 @@
         VALUES(NULL,'$dni','$apellido', '$nombre','$fecha_nac','$fecha_inc','$cargo','$sueldo')";
         //4) ejecutar la orden e ingresar datos
         mysqli_query($conexion,$consulta);
-        header('Location: empleados.php');
+        header('Location: index.php');
       }
+}
     ?>
